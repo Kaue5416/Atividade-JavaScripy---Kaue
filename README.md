@@ -1,1 +1,1 @@
-# Atividade-JavaScripy---Kaue
+# Atividade-JavaScript---Kaue
