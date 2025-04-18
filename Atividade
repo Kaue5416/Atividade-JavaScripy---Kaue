@@ -1,29 +1,47 @@
 /*questão1*/
+/*
 function soma(a, b) {
     return a + b;
 }
 
+console.log(soma(23, 23)); */
+
 /*questão2*/
+/*
 function isPar(num) {
     return num % 2 === 0;
 }
 
+console.log(isPar(2));
+console.log(isPar(3)); */
+
 /*questão3*/
+/*
 function media(nota1, nota2, nota3) {
     return (nota1 + nota2 + nota3) / 3;
 }
 
+console.log("Média total:", media(10,7,8.5)) */
+
 /*questão4*/
+/*
 function imc(peso, altura) {
     return peso / (altura * altura);
 }
 
+console.log("IMC:", imc(60, 1.68).toFixed(2))*/
+
 /*questão5*/
+/*
 function calcularDesconto(preco, desconto) {
     return preco - (preco * (desconto / 100));
 }
 
+let precoFinal = calcularDesconto(100, 15); 
+console.log("Preço com desconto:", precoFinal);*/
+
 /*questão6*/
+/*
 function calcularImpostoRenda(salario) {
     if (salario <= 22847.76) {
         return 0;
@@ -38,14 +56,23 @@ function calcularImpostoRenda(salario) {
     }
 }
 
+let imposto = calcularImpostoRenda(2369);
+console.log("Imposto de Renda: R$", imposto.toFixed(2)); */
+
 /*questão7*/
+/*
 function calcularMediaArredondada(Numeros){
     let soma = numeros.reduce((acc, num) => acc + num, 0);
     let media = soma / numeros.length;
     return Math.round(media);
 }
 
+let lista = [7.25, 45.5, 9.12];
+let media = calcularMediaArredondada(lista);
+console.log("Média arredondada:", media) */
+
 /*questão8*/
+/*
 function ContarDigitosParesImpares(numero) {
     let pares = 0;
     let impares = 0;
@@ -62,19 +89,38 @@ function ContarDigitosParesImpares(numero) {
     return { pares, impares };
 }
 
+let resultado = contarDigitosParesImpares(2956348);
+console.log("Dígitos pares:", resultado.pares);
+console.log("Dígitos ímpares:", resultado.impares); */
+
 /*questão9*/
+/*
 function calcularMediaAlunos(alunos) {
     let somaNotas = alunos.reduce((acc, aluno) => acc + aluno.nota, 0);
     return somaNotas / alunos.length;
 }
 
+let listaAlunos = [
+    { nome: "Gabriel", nota: 8 },
+    { nome: "Vitor", nota: 7.5 },
+    { nome: "Pedro", nota: 9 }
+];
+  
+let media = calcularMediaAlunos(listaAlunos);
+console.log("Média de notas:", media.toFixed(2)); */
+
 /*questão10*/
+/*
 function calcularidades(anoNascimento) {
     let anoAtual = new Date().getFullYear();
     return anoAtual - anoNascimento;
 }
 
+let idade = calcularIdade(2005);
+console.log("Idade:", idade, "anos"); */
+
 /*questão11*/
+/*
 function gerartabuada(numero) {
     let tabuada = [];
     for (let i = 1; i <= 10; i++) {
@@ -83,7 +129,10 @@ function gerartabuada(numero) {
     return tabuada;
 }
 
+gerarTabuada(9); */
+
 /*questão12*/
+/*
 function advinheNumero() {
     const numeroAleatorio = Math.floor(Math.random() * 100) + 1;
     let tentativas = 0;
@@ -104,18 +153,34 @@ function advinheNumero() {
     }
 }
 
+advinheNumero(); */
+
 /*questão13*/
+/*
 function verificarPropriedade(objeto, propriedade) {
     return objeto.hasOwnProperty(propriedade);
 }
 
+const pessoa = {
+    nome: "Alice",
+    idade: 30
+};
+  
+  console.log(verificarPropriedade(pessoa, "nome")); 
+  console.log(verificarPropriedade(pessoa, "altura")); */
+
 /*questão14*/
+/*
 function calcularPrecoProduto(valorCusto, margemLucro, valorFrete) {
     const lucro = valorCusto * (margemLucro / 100);
     return valorCusto + lucro + valorFrete;
 }
 
+let preco = calcularPrecoProduto(100, 20, 15);
+console.log("Preço de venda:", preco); */
+
 /*questão15*/
+/*
 function encontrarPalavraMaisLonga(frase) {
     const palavras = frase.split(' ');
     let palavraMaisLonga = '';
@@ -129,7 +194,11 @@ function encontrarPalavraMaisLonga(frase) {
     return palavraMaisLonga;
 }
 
+let resultado = encontrarPalavraMaisLonga("Adoro uma coquinha gelada");
+console.log("Palavra mais longa:", resultado); */
+
 /*Questão16*/
+/*
 function imprimirQuadro(lista) {
     const larguraMaxima = Math.max(...lista.map(str => str.length));
     const borda = '*'.repeat(larguraMaxima + 4);
@@ -141,17 +210,36 @@ function imprimirQuadro(lista) {
     console.log(borda);
 }
 
+imprimirEmQuadro(["Hello", "World", "in", "a", "frame"]); */
+
 /*Questão17*/
+/*
 function filtrarStringsLongas(array) {
     return array.filter(item => typeof item === 'string' && item.length > 5);
 }
 
+const palavras = ["casa", "computador", "sol", "churrasco", "livro"];
+const resultado = filtrarStringsLongas(palavras);
+
+console.log(resultado); */
+
 /*Questão18*/
+/*
 function filtrarLivrosPorAutor(livros, autor) {
     return livros.filter(livro => livro.autor === autor);
 }
 
+const biblioteca = [
+    {titulo: "Dom Casmurro", autor: "Machado de Assis", ano: 1899},
+    {titulo: "Capitães da Areia", autor: "Jorge Amado", ano: 1937},
+];
+
+const resultado = filtrarPorAutor(biblioteca, "Machado de Assis");
+  
+console.log(resultado); */
+
 /*questão19*/
+/*
 function encontrarPessoaMaisVelha(pessoas) {
     let pessoaMaisVelha = pessoas[0];
 
@@ -164,12 +252,37 @@ function encontrarPessoaMaisVelha(pessoas) {
     return pessoaMaisVelha.nome;
 }
 
+const listaPessoas = [
+    { nome: "José", idade: 30 },
+    { nome: "Ana", idade: 45 },
+    { nome: "Túlio", idade: 40 }
+];
+  
+const resultado = encontrarMaisVelha(listaPessoas);
+  
+console.log("Pessoa mais velha:", resultado); */
+
 /*questão20*/
+/*
 function filtrarCarrosPorAno(carros, ano) {
     return carros.filter(carro => carro.ano >= ano);
 }
 
+const listaCarros = [
+    { marca: "Toyota", modelo: "Corolla", ano: 2010 },
+    { marca: "Honda", modelo: "Civic", ano: 2018 },
+    { marca: "Ford", modelo: "Focus", ano: 2015 },
+    { marca: "Chevrolet", modelo: "Onix", ano: 2021 }
+];
+  
+const resultado = filtrarCarrosPorAno(listaCarros, 2015);
+  
+console.log(resultado); */
+
 /*questão21*/
+/*
 function inverterString(str) {
     return str.split('').reverse().join('');
 }
+
+console.log(inverterString("hello")); */
